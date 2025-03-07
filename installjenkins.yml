@@ -2,7 +2,7 @@
 - hosts: 172.31.32.138
 - become: yes
 - tasks: 
-  - name: install apt package
+  - name: update apt package
     apt:
     update_cache: yes
 
