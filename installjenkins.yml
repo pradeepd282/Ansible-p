@@ -1,5 +1,5 @@
 --- 
-- hosts: 172.31.32.138
+- hosts: [mywebservers]
 - become: yes
 - tasks: 
   - name: update apt package
