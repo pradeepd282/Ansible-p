@@ -1,0 +1,24 @@
+--- 
+- hosts: 172.31.32.138
+- become: yes
+- tasks: 
+- name: install apt package
+  apt:
+   update_cache: yes
+
+- name: install java
+  apt:
+   name: openjdk-17-jdk
+   state: present 
+
+- name: execute linux commands 
+  command: sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \ https://pkg.jenkins.io/debian/jenkins.io-2023.key
+
+- name: execute linux commands 
+  command: echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \ https://pkg.jenkins.io/debian binary/ | sudo tee \
+
+- name: install jenkins on server
+  apt: 
+   name: jenkins 
+   state: present 
+
