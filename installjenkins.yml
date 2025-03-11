@@ -8,7 +8,7 @@
 
   - name: install java
     apt:
-     name: openjdk-17-jdk
+     name: "{{myjavapack}}"
      state: present 
 
   - name: jenkins repository key 

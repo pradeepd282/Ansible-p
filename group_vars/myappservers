@@ -1,0 +1,4 @@
+---
+key: value
+myjenkinspack: jenkins
+myjavapack: openjdk-17-jdk
