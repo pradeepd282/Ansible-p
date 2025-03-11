@@ -71,11 +71,15 @@
      state: started 
      enabled: true 
 
-  - name: Set password for postgres user
+  - name: Set password
     user:
-     name: postgres
-     password: "$6$rounds=656000$your_salt$#postgres" # Replace with the hash
-     update_password: on_create
+     name: your_user  # Replace with the username
+     password: "{{ user_password | password_hash('sha512') }}"
+     state: present
+  vars_prompt:
+     - name: user_password
+       prompt: "Enter password for your_user"
+       private: yes
 
  
          
