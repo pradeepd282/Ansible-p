@@ -76,13 +76,9 @@
      name: postgres # Replace with the username
      password: "{{ user_password | password_hash('sha512') }}"
      state: present
-  vars_prompt:
-     - name: user_password   
-       prompt: "postgres"
-       private: yes
-
-     - name: execut linux command
-       command: sudo su - postgres
+  
+  - name: execut linux command
+    command: sudo su - postgres
 
 
      
