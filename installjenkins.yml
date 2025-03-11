@@ -13,12 +13,12 @@
 
   - name: jenkins repository key 
     apt_key:
-     url: "{{url}}"
+     url: "{{myurl}}"
      state: present
      
   - name: Add jenkins repository 
     apt_repository: 
-     repo: "{{repo}}"
+     repo: "{{myrepo}}"
      state: present
 
   - name: Update apt cache
