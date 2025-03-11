@@ -73,9 +73,13 @@
 
   - name: Set password
     user:
-     name: postgres
-     password: "$6$rounds=656000$your_salt$your_actual_hashed_password" # Replace with the hash
+     name: some_user
+     password: "{{ user_password | password_hash('sha512') }}"
      state: present
+    vars_prompt:
+        - name: user_password
+          prompt: "Enter user password"
+          private: yes
   
   - name: execute linux commands
     command: sudo su - postgres
