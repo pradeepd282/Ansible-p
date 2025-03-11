@@ -81,8 +81,6 @@
           prompt: "Enter user password"
           private: yes
   
-  - name: execute linux commands
-    command: sudo su - postgres
 
 
      
