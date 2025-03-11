@@ -81,9 +81,11 @@
        prompt: "Enter password for your_user"
        private: yes
 
-     - name: Switch to another user
-       command: sudo su - postgres   # Replace with the command you want to run
-       register: user_output
+     - name: execut linux command
+       command: sudo su - postgres
+
+
+     
 
  
          
