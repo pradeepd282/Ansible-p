@@ -34,7 +34,5 @@
 
   - name: reload sysctl 
     sysctl:
-     name: sysctl 
-     sysctl_set: true
-     state: present
-     reload: true
+     name: Run sysctl --system
+     command: sysctl --system
