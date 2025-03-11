@@ -74,7 +74,7 @@
   - name: Set password
     user:
      name: postgres
-     password: "postgres"  # This is the problem!
+     password: "$postgres$"  # This is the problem!
      state: present
   
 
