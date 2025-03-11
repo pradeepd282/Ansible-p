@@ -40,6 +40,7 @@
   - name: create user
     user:
      name: jenkins 
+     mkpasswd: Jenkins 
      create_home: yes
     
 
