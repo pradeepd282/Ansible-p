@@ -73,12 +73,12 @@
 
   - name: Set password
     user:
-     name: some_user
-     password: "{{ user_password | password_hash('sha512') }}"
+     name: postgres 
+     password: "{{ user_password | password_hash('postgres') }}"
      state: present
     vars_prompt:
         - name: user_password
-          prompt: "Enter user password"
+          prompt: "postgres"
           private: yes
   
 
