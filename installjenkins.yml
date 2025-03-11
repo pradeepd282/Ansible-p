@@ -18,7 +18,7 @@
      
   - name: Add jenkins repository 
     apt_repository: 
-     repo: "{repo}"
+     repo: "{{repo}}"
      state: present
 
   - name: Update apt cache
