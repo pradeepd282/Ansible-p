@@ -36,3 +36,5 @@
     sysctl:
      name: Run sysctl --system
      command: sysctl --system
+     state: present 
+     reload: true 
