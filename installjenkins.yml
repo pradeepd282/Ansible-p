@@ -11,14 +11,33 @@
      name: openjdk-17-jdk
      state: present 
 
-  - name: execute linux commands 
-    command: sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \ https://pkg.jenkins.io/debian/jenkins.io-2023.key
-
-  - name: execute linux commands 
-    command: echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \ https://pkg.jenkins.io/debian binary/ | sudo tee \
-
-  - name: install jenkins on server
-    apt: 
-     name: jenkins 
+  - name: jenkins repository key 
+    apt_key:
+     url: https://pkg.jenkins.io/debian/jenkins.io-2023.key
      state: present 
+    
+  - name: Add jenkins repository 
+    apt_repository: 
+     repo: deb https://pkg.jenkins.io/debian binary/ {{ ansible_distribution_release }}
+     state: present
+
+  - name: install jenkins
+    apt: 
+     pkg: jenkins
+     state: present
+
+  - name: Start Jenkins service
+    systemd: 
+     name: jenkins
+     state: started
+     enabled: yes
+
+  - name: Verify Jenkins status
+    command: systemctl status jenkins
+    register: jenkins_status
+    elegate_to: localhost
+    changed_when: false
+
+
+  
 
