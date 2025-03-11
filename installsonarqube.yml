@@ -11,3 +11,18 @@
     apt: 
      name: net-tools 
      state: present 
+
+  - name: install wget
+    package: 
+     name: wget 
+     state: present 
+
+  - name: install vim 
+    package: 
+     name: vim 
+     state: present 
+
+  - name: install curl 
+    package: 
+     name: curl 
+     state: present  
