@@ -27,8 +27,9 @@
 
   - name: install jenkins
     apt: 
-     name: jenkins
+     name: "{{myjenkinspack}}"
      state: present 
+    when: ansible_os_family=="Debian"
      
   - name: Ensure Jenkins service is started and enabled
     service:
