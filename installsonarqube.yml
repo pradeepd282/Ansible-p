@@ -68,6 +68,7 @@
   - name: start postgresql 
     service:
      name: postgresql
+     enable: postgresql 
      state: started 
          
 
