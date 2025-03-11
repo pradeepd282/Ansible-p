@@ -74,7 +74,7 @@
   - name: Set password for postgres user
     user:
      name: postgres
-     password: "postgres" # Replace with a pre-hashed password
+     password: postgres
      update_password: on_create
          
 
