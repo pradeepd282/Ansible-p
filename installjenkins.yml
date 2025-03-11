@@ -26,9 +26,9 @@
      update_cache: yes
 
   - name: install jenkins
-    service: 
+    apt: 
      name: jenkins
-     state: started
+     state: present 
      
   - name: Ensure Jenkins service is started and enabled
     service:
