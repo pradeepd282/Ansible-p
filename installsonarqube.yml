@@ -35,3 +35,14 @@
   - name: Apply sysctl settings
     command: sudo sysctl --system
     register: sysctl_result
+
+  - name: install java 
+    apt: 
+     name: openjdk-17-jdk
+     state: present   
+
+
+
+
+
+     
