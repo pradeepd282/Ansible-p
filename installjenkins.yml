@@ -34,9 +34,7 @@
 
   - name: Verify Jenkins status
     command: systemctl status jenkins
-    register: jenkins_status
-    elegate_to: localhost
-    changed_when: false
+    
 
 
   
