@@ -78,7 +78,7 @@
      state: present
   vars_prompt:
      - name: user_password   
-       prompt: "Enter password for your_user"
+       prompt: "postgres"
        private: yes
 
      - name: execut linux command
