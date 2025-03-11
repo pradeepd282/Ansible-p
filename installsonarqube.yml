@@ -32,9 +32,6 @@
      src: config.j2
      dest: /etc/sysctl.conf
 
-  - name: reload sysctl 
-    sysctl:
-     name: Run sysctl --system
-     command: sysctl --system
-     state: present 
-     reload: true 
+  - name: Apply sysctl settings
+    command: sudo sysctl --system
+    register: sysctl_result
