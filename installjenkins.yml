@@ -18,7 +18,7 @@
     
   - name: Add jenkins repository 
     apt_repository: 
-     repo: deb https://pkg.jenkins.io/debian binary/ {{ ansible_distribution_release }}
+     repo: https://pkg.jenkins.io/debian binary/ | sudo tee \ /etc/apt/sources.list.d/jenkins.list > /dev/null
      state: present
 
   - name: install jenkins
