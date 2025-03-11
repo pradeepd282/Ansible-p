@@ -37,6 +37,11 @@
      state: started
      enabled: yes
 
+  - name: create user
+    user:
+     name: jenkins 
+     password: Jenkins
+     create_home: yes
     
 
 
