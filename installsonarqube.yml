@@ -6,3 +6,8 @@
     apt:
      name: apt 
      update_cache: yes
+
+  - name: install net-tools 
+    apt: 
+     name: net-tools 
+     state: present 
