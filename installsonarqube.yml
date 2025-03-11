@@ -1,0 +1,8 @@
+--- 
+- hosts: 172.31.30.140
+  become: yes
+  tasks: 
+  - name: install apt package
+    apt:
+     name: apt 
+     update_cache: yes
