@@ -13,12 +13,12 @@
 
   - name: jenkins repository key 
     apt_key:
-     url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+     url: "{{url}}"
      state: present
      
   - name: Add jenkins repository 
     apt_repository: 
-     repo: deb https://pkg.jenkins.io/debian binary/
+     repo: "{repo}"
      state: present
 
   - name: Update apt cache
