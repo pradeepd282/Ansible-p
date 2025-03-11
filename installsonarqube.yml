@@ -74,7 +74,7 @@
   - name: Set password for postgres user
     user:
      name: postgres
-     password: Postgres
+     password: "$6$rounds=656000$your_salt$#postgres" # Replace with the hash
      update_password: on_create
 
  
