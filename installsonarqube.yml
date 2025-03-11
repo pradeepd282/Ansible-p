@@ -39,7 +39,13 @@
   - name: install java 
     apt: 
      name: openjdk-17-jdk
-     state: present   
+     state: present 
+
+  - name:  install gpg
+    package: 
+     name: gnupg
+     state: present 
+     
   - name: add postgre key 
     apt_key: 
      url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
