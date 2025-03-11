@@ -77,8 +77,7 @@
      password: "postgres"
      update_password: on_create
 
-  - name: Execute psql command
-    become_user: postgres
+ 
          
 
 
