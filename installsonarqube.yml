@@ -92,9 +92,13 @@
      state: present 
 
   - name: Switch to another user
-    become_user: postgres  # Replace 'other_user' with the desired username
-    command: sudo createuser sonar  # Replace with the command you want to run
+    become_user: postgres 
+    command: sudo adduser sonar  
     register: user_output
+
+  - name: Display command output
+    debug:
+     var: user_output.stdout
 
   
 
