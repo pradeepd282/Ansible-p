@@ -93,7 +93,7 @@
 
   - name: Switch to another user
     become_user: postgres 
-    command: sudo adduser sonar  
+    command: whoami  
     register: user_output
 
   - name: Display command output
