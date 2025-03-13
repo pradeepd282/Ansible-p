@@ -86,6 +86,11 @@
      password: $6$ouHWWSg2WH7PHfMG$WWtqkzqab6tSh50gFSLJuS.Cug.CvM0RtAWV.R4Upco1tUbnUbRCdWuwJCcZ7kfv7ZPIyRB2JBW4DfoVtFuXj1
      state: present
 
+  - name: instal acl apppp
+    apt: 
+     name: acl
+     state: present 
+
   - name: Switch to another user
     become_user: postgres  # Replace 'other_user' with the desired username
     command: sudo createuser sonar  # Replace with the command you want to run
