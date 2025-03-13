@@ -3,13 +3,11 @@
   become: yes
   tasks: 
   - name: update packages
-    apt:
-     name: apt 
+    apt: 
      update_cache: yes
 
   - name: upgarde packages 
     apt:
-     name: apt-upgrade
      upgrade: yes 
     
     
