@@ -110,6 +110,10 @@
     command: psql
     register: psql_output
 
+  - name: Display psql output
+    debug:
+     var: psql_output.stdout_lines
+
 
      
 
