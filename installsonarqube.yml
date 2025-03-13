@@ -71,11 +71,16 @@
      state: started 
      enabled: true 
 
-  - name: Set password
-    user:
-     name: postgres
-     password: postgres
-     state: present
+  - name: install doveadm
+    apt:
+     name: doveadm
+     state: present 
+
+  #- name: Set password
+  #  user:
+  #   name: postgres
+  #  password: postgres
+  #   state: present
   
 
 
