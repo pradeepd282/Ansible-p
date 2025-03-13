@@ -10,5 +10,6 @@
   - name: upgarde packages 
     apt:
      name: apt
-     upgrade_cache: yes 
+     upgrade: yes 
+     update_cache: yes
     
