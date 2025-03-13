@@ -27,7 +27,7 @@
 
   - name: extract sonarqube archive
     unarchive:
-     src: cd Users\user\Desktop\sonarqube
+     src: Users\user\Desktop\sonarqube
      dest: /opt/sonarqube 
 
     
