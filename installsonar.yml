@@ -25,9 +25,12 @@
      path: /opt/sonarqube
      state: directory 
 
-  - name: copy sonarqube zip ifle 
+  - name: Copy SonarQube ZIP from local to remote
     copy:
-     src: C:\\Users\\user\\Desktop\\sonarqube\\sonarqube-25.3.0.104237.zip.zip
-     dest: /opt/sonarqube/sonarqube-25.3.0.104237.zip.zip
+     src: "C:\\\\Users\\\\user\\\\Desktop\\\\sonarqube\\\\sonarqube-25.3.0.104237.zip"
+     dest: "/opt/sonarqube/sonarqube-25.3.0.104237.zip"
+     owner: root
+     group: root
+     mode: '0644'
 
     
