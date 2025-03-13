@@ -9,5 +9,10 @@
   - name: upgarde packages 
     apt:
      upgrade: yes 
+
+  - name: install java 
+    apt: 
+     name: openjdk-17-jdk 
+     state: present 
     
     
