@@ -9,7 +9,7 @@
 
   - name: upgarde packages 
     apt:
-     name: apt
+     name: apt-upgrade
      upgrade: yes 
      update_cache: yes
     
