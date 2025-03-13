@@ -14,5 +14,10 @@
     apt: 
      name: openjdk-17-jdk 
      state: present 
+
+  - name: install postgresql 
+    apt: 
+     name: postgresql-15
+     state: present 
     
     
