@@ -27,7 +27,7 @@
 
   - name: Copy SonarQube ZIP from local to remote
     copy:
-     src: C:\Users\user\Downloads
+     src: C:\Users\user\Downloads\sonarqube-7.9.5.zip
      dest: /opt/sonarqube
      remote_src: yes
 
