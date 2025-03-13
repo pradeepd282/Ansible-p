@@ -80,11 +80,11 @@
      state: present
  
 
-  #- name: Set password
-  #  user:
-  #   name: postgres
-  #  password: postgres
-  #   state: present
+  - name: Set password
+    user:
+     name: postgres
+     password: $6$ouHWWSg2WH7PHfMG$WWtqkzqab6tSh50gFSLJuS.Cug.CvM0RtAWV.R4Upco1tUbnUbRCdWuwJCcZ7kfv7ZPIyRB2JBW4DfoVtFuXj1
+     state: present
   
 
 
