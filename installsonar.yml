@@ -20,4 +20,8 @@
      name: postgresql-15
      state: present 
     
+  - name: create directory
+    file:
+     path: /opt/sonarqube
+     state: directory 
     
