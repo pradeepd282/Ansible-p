@@ -24,4 +24,10 @@
     file:
      path: /opt/sonarqube
      state: directory 
+
+  - name: extract sonarqube archive
+    unarchive:
+     src: C:\Users\user\Desktop\sonarqube
+     dest: /opt/sonarqube 
+
     
