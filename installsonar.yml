@@ -27,7 +27,7 @@
 
   - name: copy sonarqube zip ifle 
     copy:
-     src: "C:\\Users\\user\\Desktop\\sonarqube\\sonarqube-25.3.0.104237.zip" # Assuming the zip file is named sonarqube-25.3.0.104237.zip
-     dest: "/opt/sonarqube/sonarqube-25.3.0.104237.zip"
+     src: "C:\\Users\\user\\Desktop\\sonarqube" # Assuming the zip file is named sonarqube-25.3.0.104237.zip
+     dest: "/opt/sonarqube"
 
     
