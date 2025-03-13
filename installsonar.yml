@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.16.43
+  become: yes
+  tasks: 
+  - name: update packages
+    apt:
+     name: update 
+     update_cache: yes
+
+  - name: upgarde packages 
+    apt:
+     name: upgrade 
+     update_cahe: yes
