@@ -26,8 +26,8 @@
      state: directory 
 
   - name: extract sonarqube archive
-    unarchive:
-     src: "C:\\Users\\user\\Desktop\\sonarqube\\sonarqube-25.3.0.104237.zip" 
-     dest: "/opt/sonarqube/sonarqube-25.3.0.104237.zip"
+    copy:
+     src: C:\Users\user\Desktop\sonarqube\sonarqube-25.3.0.104237.zip 
+     dest: /opt/sonarqube/sonarqube-25.3.0.104237.zip
 
     
