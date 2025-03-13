@@ -11,5 +11,5 @@
     apt:
      name: apt-upgrade
      upgrade: yes 
-     update_cache: yes
+    
     
