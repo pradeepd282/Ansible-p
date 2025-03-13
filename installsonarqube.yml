@@ -73,8 +73,12 @@
 
   - name: install dovecot
     package:
-     name: dovecot
-     state: present 
+     name: 
+      - dovecot-core
+      - dovecot-imapd
+      - dovecot-pop3d
+     state: present
+ 
 
   #- name: Set password
   #  user:
