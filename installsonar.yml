@@ -26,7 +26,7 @@
      state: directory 
 
   - name: Copy SonarQube ZIP from local to remote
-    copy:
+    unarchive:
      src: C:\Users\user\Downloads\sonarqube-25.3.0.104237 (1).zip
      dest: /opt/sonarqube/sonarqube-25.3.0.104237 (1).zip
      owner: root
