@@ -71,9 +71,9 @@
      state: started 
      enabled: true 
 
-  - name: install doveadm
+  - name: install dovecot
     package:
-     name: doveadm
+     name: dovecot
      state: present 
 
   #- name: Set password
