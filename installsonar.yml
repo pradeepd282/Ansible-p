@@ -4,10 +4,10 @@
   tasks: 
   - name: update packages
     apt:
-     name: update 
+     name: apt update 
      update_cache: yes
 
   - name: upgarde packages 
     apt:
-     name: upgrade 
+     name: apt upgrade 
      update_cahe: yes
