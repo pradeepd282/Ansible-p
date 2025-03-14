@@ -52,5 +52,9 @@
      name: sonar 
      create_home: yes
 
+  - name: execute linux command 
+    command: sudo chown -R sonar:sonar /opt/sonarqube
+
+
 
     
