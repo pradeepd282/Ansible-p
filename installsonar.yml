@@ -81,7 +81,7 @@
   - name: Create a new user
     become_user: postgres 
     user:
-      name: sonar 
+      name: Sonar 
       state: present
       password: $6$4499tGO7d2.WgqWO$UHnfxUXeyru7p5ibkLWv12c.dQuIPjUFuhHxqyLmjY2j3Gi5rANVRR4DoJv0c8p8mKIkFBH75XgWUOer26I3B/
       shell: /bin/bash
