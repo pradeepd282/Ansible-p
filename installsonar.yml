@@ -60,7 +60,6 @@
      name: 
       - dovecot-core 
       - dovecot-imapd 
-      - dovecot-lpdapd
      state: present 
 
 
