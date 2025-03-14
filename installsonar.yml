@@ -111,10 +111,9 @@
      state: present
 
   - name: Start SonarQube service
-    service:
-     name: sonarqube  # Replace with your service name
+    systemd:
+     name: sonarqube
      state: started
-     daemon_reload: true
      enabled: yes
 
 
