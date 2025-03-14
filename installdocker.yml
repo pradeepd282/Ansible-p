@@ -29,7 +29,7 @@
 
   - name: add repositoryyyy
     apt_repository:
-     repo: deb  https://download.docker.com/linux/debian
+     repo: deb https://download.docker.com/linux/debian \$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
      state: present 
      
      
