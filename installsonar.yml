@@ -64,16 +64,11 @@
 
   - name: create user 
     user:
-     name: sonar
+     name: postgres 
+     password: $6$lM6Idhz5dApJFRk.$m4r744X17i2Z.W6UH3HREgJNpnc82UI3/EyFCpQ0fYf6BaJK8O37DjTsYdgID6aczbUTU6K/G98QxjKIJqsQN/
      shell: /bin/bash
-     password: $6$CoqCfcob6HzgCVMz$5ZCjzRrydn3jBtJeD2QQ1LZu9y9zCD2psMQAHEaZxrm413Keg9t1AOb3Hyx6/8P3v.Q8/LbosZQA3PMXjeMij0
      state: present 
 
-  - name: execute linux commands
-    command: sudo -u postgres createuser -U postgres -P sonar
-    
-  - name: execute linux commands 
-    command: sudo -u postgres createdb -O postgres -P sonar
 
 
     
