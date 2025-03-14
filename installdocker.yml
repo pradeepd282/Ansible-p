@@ -27,15 +27,11 @@
   - name: execute linux command 
     command: sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-  - name: Output Docker APT repository line
-    shell: |
-     echo \
-       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-       $(. /etc/os-release && echo "$VERSION_CODENAME")"
-    register: repo_line
-
-  - name: Display the repository line
-    debug:
-     var: repo_line.stdout
+  - name: Correct Docker repository line
+    lineinfile:
+     path: /etc/apt/sources.list.d/download_docker_com_linux_debian.list
+     regexp: '^deb ' # Adjust if needed
+     line: 'deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian $(. /etc/os-release && echo "$VERSION_CODENAME") stable'
+     state: present
      
      
