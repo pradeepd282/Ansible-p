@@ -110,10 +110,11 @@
      line: sonar.web.port=9000
      state: present
 
-  - name: Start SonarQube
-    command: /opt/sonarqube/bin/sonarqube-7.9.5/linux-x86-64/sonar.sh start
-    args:
-     chdir: /opt/sonarqube/
+  - name: Start SonarQube service
+    service:
+     name: sonarqube  # Replace with your service name
+     state: started
+     enabled: yes
 
 
 
