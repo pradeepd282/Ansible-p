@@ -56,10 +56,10 @@
     command: sudo chown -R sonar:sonar /opt/sonarqube
 
   - name: install dovecot 
-    apt: 
+    pacakge: 
      name: dovecot
      state: present 
-     
+
 
 
 
