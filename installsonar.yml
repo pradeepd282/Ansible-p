@@ -114,6 +114,7 @@
     systemd:
      name: sonarqube
      state: started
+     daemon_reload: true 
      enabled: yes
 
 
