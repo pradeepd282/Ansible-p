@@ -33,5 +33,9 @@
        "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
        $(. /etc/os-release && echo "$VERSION_CODENAME")"
     register: repo_line
+
+  - name: Display the repository line
+    debug:
+     var: repo_line.stdout
      
      
