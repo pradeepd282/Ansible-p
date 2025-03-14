@@ -30,7 +30,12 @@
      url: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.9.5.zip
      dest: /opt/sonarqube
      force_basic_auth: yes
-
+  
+  - name: unarchive sonarqube 
+    unarchive: 
+     src: /opt/sonarqube/sonarqube-7.9.5.zip
+     dest: /opt/sonarqube 
+     remote_src: yes
 
 
     
