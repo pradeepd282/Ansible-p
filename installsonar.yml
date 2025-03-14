@@ -69,6 +69,32 @@
      shell: /bin/bash
      state: present 
 
+  - name: Switch to another user (e.g., postgres)
+    become_user: postgres
+    command: whoami 
+    register: switched_user
+
+  - name: Display the user we switched to.
+    debug:
+     var: switched_user.stdout
+
+  - name: Create a new user
+    become_user: postgres 
+    user:
+      name: sonar 
+      state: present
+      password: $6$4499tGO7d2.WgqWO$UHnfxUXeyru7p5ibkLWv12c.dQuIPjUFuhHxqyLmjY2j3Gi5rANVRR4DoJv0c8p8mKIkFBH75XgWUOer26I3B/
+      create_home: yes 
+
+  - name: Verify the new user was created
+    become_user: postgres 
+    command: id newuser
+    register: newuser_info
+
+  - name: Display new user information
+    debug:
+     var: newuser_info.stdout
+
 
 
     
