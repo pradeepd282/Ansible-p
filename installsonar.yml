@@ -102,6 +102,13 @@
     template:
      src: sonar.properties.j2
      dest: /opt/sonarqube/sonarqube-7.9.5/conf/sonar.properties
+    
+  - name: Set sonar.web.port in sonar.properties
+    lineinfile:
+     path: /opt/sonarqube/sonarqube-7.9.5/conf/sonar.properties 
+     regexp: '^sonar.web.port='
+     line: sonar.web.port=9000
+     state: present
 
 
 
