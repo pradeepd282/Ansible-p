@@ -110,11 +110,9 @@
      line: sonar.web.port=9000
      state: present
 
-  - name: Start SonarQube service
-    systemd:
-     name: sonarqube      
-     state: started
-     enabled: yes 
+  - name: Start SonarQube
+    shell: /opt/sonarqube/bin/linux-amd64/sonar.sh start
+    become_user: Sonar
 
 
 
