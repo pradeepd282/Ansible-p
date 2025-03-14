@@ -111,7 +111,7 @@
      state: present
 
   - name: execute linux command 
-    command: sudo chmod +x /opt/sonarqube/sonarqube-7.9.5/bin/debian-12-amd64/sonar.sh
+    command: sudo chmod +x /opt/sonarqube/sonarqube-7.9.5/bin/linux-x86-64/sonar.sh
 
   - name: Start SonarQube service
     systemd:
