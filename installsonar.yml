@@ -111,7 +111,7 @@
      state: present
 
   - name: execute linux command 
-    command: sudo -u sonar /opt/sonarqube/bin/linux-amd64/sonar.sh start
+    command: sudo -u Sonar /opt/sonarqube/bin/sonarqube-7.9.5/linux-x86-64/sonar.sh start
 
 
 
