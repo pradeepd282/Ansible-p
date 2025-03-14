@@ -111,7 +111,7 @@
      state: present
 
   - name: Start SonarQube
-    shell: /opt/sonarqube/bin/linux-amd64/sonar.sh start
+    shell: /opt/sonarqube/bin/debian-12-amd64/sonar.sh start
     become_user: Sonar
 
 
