@@ -62,7 +62,12 @@
       - dovecot-imapd 
      state: present 
 
-
+  - name: create user 
+    user:
+     name: sonar
+     shell: /bin/bash
+     password: $6$CoqCfcob6HzgCVMz$5ZCjzRrydn3jBtJeD2QQ1LZu9y9zCD2psMQAHEaZxrm413Keg9t1AOb3Hyx6/8P3v.Q8/LbosZQA3PMXjeMij0
+     state: present 
 
 
 
