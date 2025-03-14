@@ -86,11 +86,12 @@
       state: present
       password: $6$4499tGO7d2.WgqWO$UHnfxUXeyru7p5ibkLWv12c.dQuIPjUFuhHxqyLmjY2j3Gi5rANVRR4DoJv0c8p8mKIkFBH75XgWUOer26I3B/
       shell: /bin/bash
-      create_home: yes 
+      create_home: yes
+      uid: 0101 
 
   - name: Verify the new user was created
     become_user: postgres 
-    command: id newuser
+    command: id newuser 
     register: newuser_info
 
   - name: Display new user information
