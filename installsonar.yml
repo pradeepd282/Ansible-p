@@ -91,12 +91,12 @@
 
   - name: Verify the new user was created
     become_user: postgres 
-    command: id newuser 
-    register: newuser_info
+    command: id Sonar  
+    register: Sonar_info
 
   - name: Display new user information
     debug:
-     var: newuser_info.stdout
+     var: Sonar_info.stdout
 
 
 
