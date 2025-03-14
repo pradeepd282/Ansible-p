@@ -114,6 +114,7 @@
     service:
      name: sonarqube  # Replace with your service name
      state: started
+     daemon_reload: true
      enabled: yes
 
 
