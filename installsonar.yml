@@ -110,9 +110,9 @@
      line: sonar.web.port=9000
      state: present
 
-  - name: Start SonarQube
-    shell: /opt/sonarqube/bin/debian-12-amd64/sonar.sh start
-    become_user: Sonar
+  - name: execute linux command 
+    command: sudo -u sonar /opt/sonarqube/bin/linux-amd64/sonar.sh start
+
 
 
 
