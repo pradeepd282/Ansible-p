@@ -16,7 +16,7 @@
   - name: install directory
     file: 
      path: /etc/apt/keyrings
-     stete: directory 
-      
+     state: directory 
+
      
      
