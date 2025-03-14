@@ -1,0 +1,16 @@
+--- 
+- hosts: 172.31.16.43
+  become: yes
+  tasks: 
+  - name: install apt package 
+    apt:
+     name: apt 
+     update_cache: yes
+     state: present 
+
+  - name: install curl package 
+    apt:
+     name: curl 
+     state: present 
+     
+     
