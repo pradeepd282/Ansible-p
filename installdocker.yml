@@ -12,5 +12,11 @@
     apt:
      name: curl 
      state: present 
+
+  - name: install directory
+    file: 
+     path: /etc/apt/keyrings
+     stete: directory 
+      
      
      
