@@ -56,8 +56,11 @@
     command: sudo chown -R sonar:sonar /opt/sonarqube
 
   - name: install dovecot 
-    package: 
-     name: dovecot
+    apt: 
+     name: 
+      - dovecot-core 
+      - dovecot-imapd 
+      - dovecot-lpdapd
      state: present 
 
 
