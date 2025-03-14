@@ -112,7 +112,8 @@
 
   - name: Start SonarQube
     command: /opt/sonarqube/bin/sonarqube-7.9.5/linux-x86-64/sonar.sh start
-    become_user: Sonar
+    args:
+     chdir: /opt/sonarqube/
 
 
 
