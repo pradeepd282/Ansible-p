@@ -98,6 +98,11 @@
     debug:
      var: Sonar_info.stdout
 
+  - name: copy a file 
+    template:
+     src: sonar.properties.j2
+     dest: /opt/sonarqube/sonarqube-7.9.5/conf/sonar.properties
+
 
 
     
