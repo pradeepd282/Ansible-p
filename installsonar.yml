@@ -24,7 +24,7 @@
     package: 
      name: unzip
      state: present 
-     
+
   - name: install postgresql 
     apt: 
      name: postgresql-15
@@ -46,6 +46,9 @@
      src: /opt/sonarqube/sonarqube-7.9.5.zip
      dest: /opt/sonarqube 
      remote_src: yes
+  
+  - name: execute linux command 
+    command: cp sonarqube-7.9.5/conf/sonar.properties.example sonarqube-7.9.5/conf/sonar.properties
 
 
     
