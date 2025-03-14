@@ -23,5 +23,9 @@
     get_url:
      url: https://download.docker.com/linux/debian/gpg
      dest: /etc/apt/keyrings/docker.asc
+
+  - name: execute linux command 
+    command: sudo chmod a+r /etc/apt/keyrings/docker.asc
+
      
      
