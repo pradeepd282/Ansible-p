@@ -19,5 +19,9 @@
      state: directory 
      mode: 0755
 
+  - name: download docker jpg key 
+    get_url:
+     url: https://download.docker.com/linux/debian/gpg
+     dest: /etc/apt/keyrings/docker.asc
      
      
