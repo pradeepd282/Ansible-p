@@ -15,6 +15,16 @@
      name: openjdk-17-jdk 
      state: present 
 
+  - name: install zip 
+    package: 
+     name: zip 
+     state: present 
+
+  - name: install unzip
+    package: 
+     name: unzip
+     state: present 
+     
   - name: install postgresql 
     apt: 
      name: postgresql-15
